@@ -10,14 +10,14 @@ exports.handler = async function(event, context) {
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'your-email@gmail.com',
-            pass: 'your-email-password' // You should use an app-specific password here
+            user: 'austin@southerndreamhomes.org',
+            pass: 'vmmsecxlsazgnors' // You should use an app-specific password here
         }
     });
 
     let info = await transporter.sendMail({
-        from: '"Southern Dream Homes" <your-email@gmail.com>', 
-        to: "your-email@gmail.com", 
+        from: '"Southern Dream Homes" <austin@southerndreamhomes.org>', 
+        to: "austin@southerndreamhomes.org", 
         subject: "New Form Submission", 
         text: JSON.stringify(body, null, 2), 
     });
